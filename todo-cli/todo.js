@@ -32,16 +32,5 @@ const todoList = () => {
     toDisplayableList,
   };
 };
+const today = new Date().toISOString().split('T')[0];
 module.exports = todoList;
-// ####################################### #
-// DO NOT CHANGE ANYTHING BELOW THIS LINE. #
-// ####################################### #
-
-// const todos = todoList();
-
-const formattedDate = (d) => {
-  return d.toISOString().split('T')[0];
-};
-
-const dateToday = new Date();
-const today = formattedDate(dateToday);
