@@ -7,6 +7,7 @@ console.log(args);
 
 let homeContent = "";
 let projectContent = "";
+let registrationContent = "";
 
 fs.readFile("home.html", (err, home) => {
   if (err) throw err;
@@ -27,6 +28,7 @@ http
   .createServer((req, res) => {
     let url = req.url;
     res.writeHead(200, { "content-type": "text/html" });
+    console.log(args.port);
     switch (url) {
       case "/project":
         res.write(projectContent);
